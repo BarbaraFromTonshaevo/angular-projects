@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Inter', sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --accodion-border: #d2d2d2;
+  --color-text-main: #333;
+  --accordion-background-active: #f8f8f8;
+}
+
+.accordion__container{
+  width: 100%;
+  border: 1px solid var(--accodion-border);
+  border-radius: 8px;
+}
+
+app-accordion:not(:last-child){
+  box-shadow: 0 1px var(--accodion-border);
+}
+
+.accordion{
+  width: 100%;
+  transition: all 0.15s ease-in;
+}
+
+.accordion:not(:last-child){
+  box-shadow: 0 1px var(--accodion-border);
+}
+.accordion:not(.active):hover{
+  background: rgba(0, 0, 0, 0.028);
+}
+
+.accordion.active{
+  background: rgba(0, 0, 0, 0.028);
+}
+
+.accordion.active .accordion__icon{
+  transform: rotate(180deg);
+}
+
+.accordion.active .accordion__body{
+  display: block;
+}
+
+
+.accordion__header{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.accordion__title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.accordion__body{
+  display: none;
+  padding: 0 24px 16px;
+}
+
+.accordion__body p{
+  margin-top: 0;
+  max-width: 80ch;
+}
+
+
+
